@@ -1,11 +1,14 @@
-import { Button } from '@mui/material';
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-        <Button variant="text">Text</Button>
-        <Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+        </Routes>
+        </Router>
     </div>
   );
 }
