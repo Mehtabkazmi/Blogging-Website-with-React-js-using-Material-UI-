@@ -1,25 +1,35 @@
 import React from 'react'
-import { Box,List,ListItemButton ,ListItemIcon,ListItemText,Typography,FormControl,InputLabel,Input,InputAdornment,IconButton  } from '@mui/material';
+import { Box,List,ListItemButton ,ListItemIcon,ListItemText,FormControl,InputLabel,Input,InputAdornment,IconButton} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
-import { styled, alpha } from '@mui/material/styles';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import ElectricCarIcon from '@mui/icons-material/ElectricCar';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import SearchIcon from '@mui/icons-material/Search';
-import './style.css';
 
 const LeftSidebar = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
-  const getCurrentYear = () => {
-    return new Date().getFullYear();
-  };
+
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
   };
+
   return (
-    <Box sx={{ flex: 1,borderRight:'1px solid gray',marginTop:'8%',display: { xs: "none", sm: "block" }}}>
+    <Box sx={{ flex: 1, borderRight: '1px solid gray', marginTop: '8%', display: { xs: "none", sm: "block" } }}>
+      {/* search  */}
+      <FormControl sx={{ ml: 2,mb:5, width: '30ch' }} variant="filled">
+          <InputLabel sx={{color:'gray'}}>Password</InputLabel>
+          <Input
+            type='text'
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton  sx={{color:'gray'}}><SearchIcon/></IconButton>
+              </InputAdornment>
+            }
+          />
+      </FormControl>
+      {/* category */}
       <List sx={{ width: '90%', bgcolor:'#121212',borderRadius:3,marginLeft:'5%'}} component="nav">
         <ListItemButton
           selected={selectedIndex === 0}
@@ -63,19 +73,6 @@ const LeftSidebar = () => {
           </ListItemIcon>
         </ListItemButton>
       </List>
-      <Typography component='p' sx={{ color: 'white', textAlign: 'center', marginTop: '10px' }}>Subscribe for newsletter</Typography>
-      <FormControl sx={{ ml: 2, width: '30ch' }} variant="filled">
-          <InputLabel sx={{color:'gray'}}>Password</InputLabel>
-          <Input
-            type='email'
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton  sx={{color:'gray'}}><SearchIcon/></IconButton>
-              </InputAdornment>
-            }
-          />
-      </FormControl>
-      <Typography sx={{p:2}}>Copyright ©{getCurrentYear()} All rights reserved | This is made with  by Mehtab kazmi</Typography>
     </Box>
   )
 }

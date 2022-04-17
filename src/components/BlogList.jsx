@@ -5,6 +5,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { motion } from 'framer-motion';
 import { Post } from '../data';
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -33,7 +34,7 @@ const BlogList = () => {
         }
         action={
           <IconButton aria-label="settings">
-            <MoreVertIcon />
+            <MoreVertIcon  sx={{color:'white'}}/>
           </IconButton>
         }
         title={item.title}
@@ -48,9 +49,9 @@ const BlogList = () => {
             <Typography variant="body2" color="gray">{ item.cartContent }</Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <motion.IconButton whileTap={{ scale: 0.9 }} aria-label="add to favorites">
           <FavoriteIcon  sx={{ color: 'white' }}  />
-        </IconButton>
+        </motion.IconButton>
         <IconButton aria-label="share">
           <ShareIcon  sx={{ color: 'white' }} />
         </IconButton>
