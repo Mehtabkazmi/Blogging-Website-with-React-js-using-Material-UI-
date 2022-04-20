@@ -18,7 +18,7 @@ const RightSidebar = () => {
     setSelectedIndex(index);
   };
   return (
-    <Box sx={{ flex: 1, borderRight: '1px solid gray', marginTop: '8%', display: { xs: "none", sm: "block" } }}>
+    <Box sx={{ flex: 1, borderRight: '1px solid gray', marginTop: '8%' }}>
       <Box position="fixed">
       <List sx={{ width: '90%', bgcolor:'#121212',borderRadius:3,marginLeft:'5%'}} component="nav">
         <ListItemButton

@@ -1,3 +1,12 @@
 .button{
     color: white;
 }
+.MuiBottomNavigationAction-label{
+    color:gray;
+}
+.Mui-selected{
+    color:white
+}
+.bottomIcon{
+ color:white
+}

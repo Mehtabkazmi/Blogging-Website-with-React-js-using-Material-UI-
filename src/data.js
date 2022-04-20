@@ -1,6 +1,7 @@
 export const Post = [
     {
         id: 1,
+        category:"Fashion",
         avatar:'M',
         title: "A Loving Heart is the Truest Wisdom",
         subheader: "Crypto collectibles and NFT’s are gaining steam",
@@ -10,6 +11,7 @@ export const Post = [
     },
     {
         id: 2,
+        category:"Technology",
         avatar:'A',
         title: "5 Best Coupon Websites to Save You Tons of Money in 2021",
         subheader: "If you shop online, you probably know the fantastic",
@@ -19,6 +21,7 @@ export const Post = [
     },
     {
         id: 3,
+        category:"Travel",
         avatar:'C',
         title: "6 Creative (and Legit) Ways to Make an Extra Income",
         subheader: "The world of employment has changed for good",
@@ -28,6 +31,7 @@ export const Post = [
     },
     {
         id: 4,
+        category:"Food",
         avatar:'F',
         title: "5 Foods That Help You Lose Weight",
         subheader: "Fat isn’t fate, although it can sometimes feel like it’s your destiny to pile on the pounds as you get older. ",
@@ -37,6 +41,7 @@ export const Post = [
     },
     {
         id: 5,
+        category:"Photography",
         avatar:'H',
         title: "Top Investments of the Last Decade",
         subheader: "From Gold to Cannabis to Bitcoin, here are the top investments",
