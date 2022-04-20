@@ -9,7 +9,8 @@ import Typography from '@mui/material/Typography';
 import { Post } from '../data';
 const PopularArticle=()=> {
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List sx={{ mt:5,width: '90%', bgcolor: '#121212', borderRadius: 3, marginLeft: '5%' }}>
+      <Typography variant='h6' component="p" sx={{margin:'10px'}}>Popular Posts</Typography>
           {Post && Post.map((item) => (
     <div>
         <ListItem alignItems="flex-start">
@@ -17,19 +18,12 @@ const PopularArticle=()=> {
           <Avatar alt="Remy Sharp" src={item.image} />
         </ListItemAvatar>
         <ListItemText
-          primary={item.title}
-          secondary={
-            <>
-              <Typography
-                sx={{ display: 'inline',whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis',width:'10px' }}
-                component="span"
-                variant="body2"
-                color="text.primary"
-              >
-                {item.subheader}
-              </Typography>
-            </>
-          }
+          primary={
+                    <div style={{color:'white'}}>{item.title}</div>
+                    }
+                  secondary={
+                    <div style={{color:'gray'}}>{item.subheader}</div>
+                    }
         />
       </ListItem>
     <Divider variant="inset" component="li" />
